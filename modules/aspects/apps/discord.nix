@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   apps.discord = {
     homeManager = {
       imports = [ inputs.nixcord.homeModules.nixcord ];

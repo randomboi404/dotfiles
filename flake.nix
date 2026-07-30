@@ -46,6 +46,16 @@
 
     xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay?ref=dev-for-26.05";
 
+    nixfmt-rs = {
+      url = "github:Mic92/nixfmt-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    treefmt-nix = {
+      url = "github:numtide/treefmt-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixpkgs-lact = {
       url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
     };

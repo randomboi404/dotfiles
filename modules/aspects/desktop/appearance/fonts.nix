@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   desktop.fonts = {
     nixos =
       { pkgs, ... }:

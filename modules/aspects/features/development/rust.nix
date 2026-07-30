@@ -1,10 +1,12 @@
 {
   development.rust = {
-    nixos = { pkgs, ... }: {
-      environment.systemPackages = with pkgs; [
-        jetbrains.rust-rover
-        rustup
-      ];
-    };
+    nixos =
+      { pkgs, ... }:
+      {
+        environment.systemPackages = with pkgs; [
+          jetbrains.rust-rover
+          rustup
+        ];
+      };
   };
 }

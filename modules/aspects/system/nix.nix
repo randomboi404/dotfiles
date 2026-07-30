@@ -1,9 +1,14 @@
 { inputs, ... }:
 {
   perSystem =
-    { pkgs, ... }:
+    { pkgs, system, ... }:
     {
-      formatter = pkgs.nixfmt-tree;
+      formatter = inputs.treefmt-nix.lib.mkWrapper pkgs {
+        programs.nixfmt = {
+          enable = true;
+          package = inputs.nixfmt-rs.packages.${system}.default;
+        };
+      };
     };
 
   system.nix = {

@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   desktop.stylix = {
     nixos =
       { pkgs, ... }:

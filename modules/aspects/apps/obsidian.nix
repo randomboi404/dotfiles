@@ -1,4 +1,5 @@
-{ inputs, ... }: {
+{ inputs, ... }:
+{
   apps.obsidian = {
     homeManager =
       { pkgs, ... }:
