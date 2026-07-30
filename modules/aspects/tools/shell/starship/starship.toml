@@ -1,0 +1,140 @@
+format = """\
+[╭─](fg:base08)\
+$username\
+$os\
+$git_branch\
+(\
+    at \
+    $directory\
+)\
+$fill $cmd_duration $time\
+(\
+    $python\
+    $conda\
+    $nodejs\
+    $c\
+    $rust\
+    $java\
+)
+[╰─](fg:base08)$character\
+"""
+
+add_newline = true
+
+[username]
+style_user = 'bold base08'
+style_root = 'bold base09'
+format = '[󱄅 $user](fg:$style) '
+disabled = false
+show_always = true
+
+[os]
+format = "on [($name)]($style) "
+style = "bold base0D"
+disabled = true
+
+[os.symbols]
+Alpine = " "
+Arch = " "
+Debian = " "
+EndeavourOS = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+Mint = " "
+NixOS = "󱄅"
+openSUSE = " "
+Pop = " "
+SUSE = " "
+Ubuntu = " "
+Windows = " "
+
+[character]
+success_symbol = "[▶](fg:base08)"
+error_symbol = "[▶](fg:base08)"
+vimcmd_symbol = "[▶](fg:base0A)"
+
+[directory]
+format = "[$path](bold $style)[$read_only]($read_only_style) "
+truncation_length = 2
+style = "fg:base0D"
+read_only_style = "fg:base0D"
+before_repo_root_style = "fg:base0D"
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only ="  "
+
+[time]
+disabled = false
+format = "[󱑈 $time]($style) "
+time_format = "%H:%M"
+style = "bold fg:base04"
+
+[cmd_duration]
+disabled = false
+format = "took [ $duration]($style) "
+style = "bold fg:base08"
+min_time = 500
+
+[git_branch]
+format = "via [$symbol$branch]($style) "
+style = "bold fg:base0E"
+symbol = " "
+
+[git_status]
+format = '[ $all_status$ahead_behind ]($style)'
+style = "fg:base05 bg:base0E"
+disabled = true
+
+[docker_context]
+disabled=false
+symbol = " "
+
+[package]
+disabled=false
+
+[fill]
+symbol = " "
+
+[nodejs]
+format = "[ $symbol$version ]($style)"
+style = "bg:base0B fg:base00"
+symbol = " "
+version_format = "${raw}"
+disabled=false
+
+[python]
+disabled=false
+format = '[ ${symbol}${pyenv_prefix}(${version})( \($virtualenv\)) ]($style)'
+symbol = " "
+version_format = "${raw}"
+style = "bg:base0A fg:base00"
+
+[conda]
+format = "[ $symbol$environment ]($style)"
+style = "bg:base0C fg:base00"
+ignore_base = false
+disabled = false
+symbol = " "
+
+[java]
+format = "[ $symbol$version ]($style)"
+style = "bg:base09 fg:base00"
+version_format = "${raw}"
+symbol = " "
+disabled = false
+
+[c]
+format = "[ $symbol($version(-$name)) ]($style)"
+style = "bg:base0C fg:base00"
+symbol = " "
+version_format = "${raw}"
+disabled=false
+
+[rust]
+format ="[ $symbol$version ]($style)"
+style = "bg:base0E fg:base00"
+symbol = " "
+version_format = "${raw}"
+disabled=false

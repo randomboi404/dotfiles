@@ -1,0 +1,395 @@
+apply_settings_timer: 5
+auto_switch_profiles: false
+current_profile: Undervolt
+daemon:
+  admin_group: wheel
+  disable_clocks_cleanup: false
+  log_level: info
+profiles:
+  Undervolt:
+    gpus:
+      10DE:25EC-1028:0BF8-0000:01:00.0:
+        fan_control_enabled: false
+        gpu_vf_curve:
+          '0':
+            clockspeed: 210
+            voltage: 450
+          '1':
+            clockspeed: 210
+            voltage: 456
+          '10':
+            clockspeed: 337
+            voltage: 512
+          '100':
+            clockspeed: 1860
+            voltage: 1075
+          '101':
+            clockspeed: 1860
+            voltage: 1081
+          '102':
+            clockspeed: 1860
+            voltage: 1087
+          '103':
+            clockspeed: 1860
+            voltage: 1093
+          '104':
+            clockspeed: 1860
+            voltage: 1100
+          '105':
+            clockspeed: 1860
+            voltage: 1106
+          '106':
+            clockspeed: 1860
+            voltage: 1112
+          '107':
+            clockspeed: 1860
+            voltage: 1118
+          '108':
+            clockspeed: 1860
+            voltage: 1125
+          '109':
+            clockspeed: 1860
+            voltage: 1131
+          '11':
+            clockspeed: 367
+            voltage: 518
+          '110':
+            clockspeed: 1860
+            voltage: 1137
+          '111':
+            clockspeed: 1860
+            voltage: 1143
+          '112':
+            clockspeed: 1860
+            voltage: 1150
+          '113':
+            clockspeed: 1860
+            voltage: 1156
+          '114':
+            clockspeed: 1860
+            voltage: 1162
+          '115':
+            clockspeed: 1860
+            voltage: 1168
+          '116':
+            clockspeed: 1860
+            voltage: 1175
+          '117':
+            clockspeed: 1860
+            voltage: 1181
+          '118':
+            clockspeed: 1860
+            voltage: 1187
+          '119':
+            clockspeed: 1860
+            voltage: 1193
+          '12':
+            clockspeed: 405
+            voltage: 525
+          '120':
+            clockspeed: 1860
+            voltage: 1200
+          '121':
+            clockspeed: 1860
+            voltage: 1206
+          '122':
+            clockspeed: 1860
+            voltage: 1212
+          '123':
+            clockspeed: 1860
+            voltage: 1218
+          '124':
+            clockspeed: 1860
+            voltage: 1225
+          '125':
+            clockspeed: 1860
+            voltage: 1231
+          '126':
+            clockspeed: 1860
+            voltage: 1237
+          '13':
+            clockspeed: 442
+            voltage: 531
+          '14':
+            clockspeed: 472
+            voltage: 537
+          '15':
+            clockspeed: 510
+            voltage: 543
+          '16':
+            clockspeed: 540
+            voltage: 550
+          '17':
+            clockspeed: 577
+            voltage: 556
+          '18':
+            clockspeed: 607
+            voltage: 562
+          '19':
+            clockspeed: 637
+            voltage: 568
+          '2':
+            clockspeed: 210
+            voltage: 462
+          '20':
+            clockspeed: 667
+            voltage: 575
+          '21':
+            clockspeed: 697
+            voltage: 581
+          '22':
+            clockspeed: 735
+            voltage: 587
+          '23':
+            clockspeed: 765
+            voltage: 593
+          '24':
+            clockspeed: 795
+            voltage: 600
+          '25':
+            clockspeed: 817
+            voltage: 606
+          '26':
+            clockspeed: 847
+            voltage: 612
+          '27':
+            clockspeed: 877
+            voltage: 618
+          '28':
+            clockspeed: 907
+            voltage: 625
+          '29':
+            clockspeed: 930
+            voltage: 631
+          '3':
+            clockspeed: 210
+            voltage: 468
+          '30':
+            clockspeed: 960
+            voltage: 637
+          '31':
+            clockspeed: 990
+            voltage: 643
+          '32':
+            clockspeed: 1012
+            voltage: 650
+          '33':
+            clockspeed: 1035
+            voltage: 656
+          '34':
+            clockspeed: 1065
+            voltage: 662
+          '35':
+            clockspeed: 1087
+            voltage: 668
+          '36':
+            clockspeed: 1110
+            voltage: 675
+          '37':
+            clockspeed: 1140
+            voltage: 681
+          '38':
+            clockspeed: 1387
+            voltage: 687
+          '39':
+            clockspeed: 1410
+            voltage: 693
+          '4':
+            clockspeed: 210
+            voltage: 475
+          '40':
+            clockspeed: 1410
+            voltage: 700
+          '41':
+            clockspeed: 1410
+            voltage: 706
+          '42':
+            clockspeed: 1432
+            voltage: 712
+          '43':
+            clockspeed: 1455
+            voltage: 718
+          '44':
+            clockspeed: 1485
+            voltage: 725
+          '45':
+            clockspeed: 1507
+            voltage: 731
+          '46':
+            clockspeed: 1530
+            voltage: 737
+          '47':
+            clockspeed: 1552
+            voltage: 743
+          '48':
+            clockspeed: 1575
+            voltage: 750
+          '49':
+            clockspeed: 1597
+            voltage: 756
+          '5':
+            clockspeed: 210
+            voltage: 481
+          '50':
+            clockspeed: 1612
+            voltage: 762
+          '51':
+            clockspeed: 1627
+            voltage: 768
+          '52':
+            clockspeed: 1650
+            voltage: 775
+          '53':
+            clockspeed: 1665
+            voltage: 781
+          '54':
+            clockspeed: 1680
+            voltage: 787
+          '55':
+            clockspeed: 1695
+            voltage: 793
+          '56':
+            clockspeed: 1710
+            voltage: 800
+          '57':
+            clockspeed: 1725
+            voltage: 806
+          '58':
+            clockspeed: 1740
+            voltage: 812
+          '59':
+            clockspeed: 1755
+            voltage: 818
+          '6':
+            clockspeed: 210
+            voltage: 487
+          '60':
+            clockspeed: 1770
+            voltage: 825
+          '61':
+            clockspeed: 1777
+            voltage: 831
+          '62':
+            clockspeed: 1792
+            voltage: 837
+          '63':
+            clockspeed: 1807
+            voltage: 843
+          '64':
+            clockspeed: 1822
+            voltage: 850
+          '65':
+            clockspeed: 1837
+            voltage: 856
+          '66':
+            clockspeed: 1852
+            voltage: 862
+          '67':
+            clockspeed: 1860
+            voltage: 868
+          '68':
+            clockspeed: 1860
+            voltage: 875
+          '69':
+            clockspeed: 1860
+            voltage: 881
+          '7':
+            clockspeed: 225
+            voltage: 493
+          '70':
+            clockspeed: 1860
+            voltage: 887
+          '71':
+            clockspeed: 1860
+            voltage: 893
+          '72':
+            clockspeed: 1860
+            voltage: 900
+          '73':
+            clockspeed: 1860
+            voltage: 906
+          '74':
+            clockspeed: 1860
+            voltage: 912
+          '75':
+            clockspeed: 1860
+            voltage: 918
+          '76':
+            clockspeed: 1860
+            voltage: 925
+          '77':
+            clockspeed: 1860
+            voltage: 931
+          '78':
+            clockspeed: 1860
+            voltage: 937
+          '79':
+            clockspeed: 1860
+            voltage: 943
+          '8':
+            clockspeed: 262
+            voltage: 500
+          '80':
+            clockspeed: 1860
+            voltage: 950
+          '81':
+            clockspeed: 1860
+            voltage: 956
+          '82':
+            clockspeed: 1860
+            voltage: 962
+          '83':
+            clockspeed: 1860
+            voltage: 968
+          '84':
+            clockspeed: 1860
+            voltage: 975
+          '85':
+            clockspeed: 1860
+            voltage: 981
+          '86':
+            clockspeed: 1860
+            voltage: 987
+          '87':
+            clockspeed: 1860
+            voltage: 993
+          '88':
+            clockspeed: 1860
+            voltage: 1000
+          '89':
+            clockspeed: 1860
+            voltage: 1006
+          '9':
+            clockspeed: 300
+            voltage: 506
+          '90':
+            clockspeed: 1860
+            voltage: 1012
+          '91':
+            clockspeed: 1860
+            voltage: 1018
+          '92':
+            clockspeed: 1860
+            voltage: 1025
+          '93':
+            clockspeed: 1860
+            voltage: 1031
+          '94':
+            clockspeed: 1860
+            voltage: 1037
+          '95':
+            clockspeed: 1860
+            voltage: 1043
+          '96':
+            clockspeed: 1860
+            voltage: 1050
+          '97':
+            clockspeed: 1860
+            voltage: 1056
+          '98':
+            clockspeed: 1860
+            voltage: 1062
+          '99':
+            clockspeed: 1860
+            voltage: 1068
+version: 6

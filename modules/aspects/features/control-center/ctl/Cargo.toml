@@ -1,0 +1,8 @@
+[package]
+name = "ctl"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+brightness = { version = "0.8", features = ["blocking"] }
+volumecontrol = "0.1"
