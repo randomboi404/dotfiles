@@ -23,6 +23,7 @@
       apps.furmark
       apps.kitty
       apps.obsidian
+      tools.neovim
       tools.fish
       tools.starship
       tools.opencode

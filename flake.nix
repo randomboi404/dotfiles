@@ -59,6 +59,8 @@
     nixpkgs-lact = {
       url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
     };
+
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
