@@ -51,6 +51,7 @@
       desktop.launcher.vicinae
       development.cpp
       development.js
+      development.java
       development.rust
     ];
   };

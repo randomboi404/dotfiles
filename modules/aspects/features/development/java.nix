@@ -1,11 +1,11 @@
 {
-  development.cpp = {
+  development.java = {
     nixos =
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
           # TODO: remove once https://github.com/NixOS/nixpkgs/pull/546636 merges
-          (jetbrains.clion.overrideAttrs (old: {
+          (jetbrains.idea.overrideAttrs (old: {
             buildInputs = old.buildInputs ++ [
               alsa-lib
               at-spi2-atk
@@ -32,11 +32,9 @@
               fi
             '';
           }))
-          cmake
-          gcc
-          clang
-          ninja
-          gpp
+          jdk
+          maven
+          gradle
         ];
       };
   };
