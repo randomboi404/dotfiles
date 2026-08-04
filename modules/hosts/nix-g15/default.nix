@@ -21,7 +21,10 @@
 
   den.aspects.nix-g15 = {
     nixos = {
-      imports = [ ./_hardware-configuration.nix ];
+      imports = [
+        ./_disk.nix
+        ./_sensors.nix
+      ];
     };
 
     includes = [

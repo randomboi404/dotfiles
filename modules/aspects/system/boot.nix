@@ -9,40 +9,23 @@
             device = "nodev";
             efiSupport = true;
           };
-
-          loader.systemd-boot.enable = false;
-
           loader.efi.canTouchEfiVariables = true;
+          loader.timeout = 3;
 
           kernelPackages = pkgs.linuxPackages_zen;
 
-          blacklistedKernelModules = [
-            "intel_ish_ipc"
-            "intel_ishtp"
-            "intel_ishtp_hid"
+          initrd.systemd.enable = true;
 
-            "hid_sensor_hub"
-            "hid_sensor_accel_3d"
-            "hid_sensor_gyro_3d"
-            "hid_sensor_als"
-            "hid_sensor_prox"
-            "hid_sensor_custom"
-            "hid_sensor_trigger"
-            "hid_sensor_iio_common"
+          # Enable silent boot
+          consoleLogLevel = 3;
+          initrd.verbose = false;
+          kernelParams = [
+            "quiet"
+            "rd.udev.log_level=3"
+            "rd.systemd.show_status=auto"
+            "8250.nr_uarts=0"
           ];
-
-          initrd.availableKernelModules = [
-            "xhci_pci"
-            "nvme"
-            "usbhid"
-            "usb_storage"
-            "sd_mod"
-          ];
-
-          kernelModules = [ "kvm-intel" ];
         };
-
-        hardware.sensor.iio.enable = false;
       };
   };
 }
