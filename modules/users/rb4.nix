@@ -22,6 +22,7 @@
       apps.kitty
       apps.obsidian
       apps.pwvucontrol
+      apps.nemo
       tools.neovim
       tools.fish
       tools.starship
