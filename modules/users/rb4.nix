@@ -3,8 +3,6 @@
   apps,
   tools,
   features,
-  services,
-  desktop,
   ...
 }:
 {
@@ -23,6 +21,7 @@
       apps.furmark
       apps.kitty
       apps.obsidian
+      apps.pwvucontrol
       tools.neovim
       tools.fish
       tools.starship
