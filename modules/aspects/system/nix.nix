@@ -13,7 +13,12 @@
 
   system.nix = {
     nixos =
-      { pkgs, flakePath, ... }:
+      {
+        pkgs,
+        system,
+        flakePath,
+        ...
+      }:
       {
         imports = [ inputs.nix-index-database.nixosModules.nix-index ];
 
@@ -45,7 +50,10 @@
 
         documentation.man.cache.enable = true;
         services.envfs.enable = true;
-        environment.systemPackages = [ pkgs.nh ];
+        environment.systemPackages = [
+          pkgs.nh
+          inputs.nixfmt-rs.packages.${system}.default
+        ];
       };
   };
 }
