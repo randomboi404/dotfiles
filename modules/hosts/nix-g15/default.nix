@@ -48,7 +48,7 @@
       services.undervolt
       features.containers
       features.ctl
-      desktop.gnome
+      desktop.xfce
       desktop.fonts
       desktop.launcher.vicinae
       development.cpp

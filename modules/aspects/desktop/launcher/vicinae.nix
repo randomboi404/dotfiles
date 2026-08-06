@@ -1,15 +1,13 @@
 {
   desktop.launcher.vicinae = {
-    homeManager =
-      { pkgs, ... }:
-      {
-        programs.vicinae = {
+    homeManager = {
+      programs.vicinae = {
+        enable = true;
+        systemd = {
           enable = true;
-          systemd = {
-            enable = true;
-            autoStart = true;
-          };
+          autoStart = true;
         };
       };
+    };
   };
 }
