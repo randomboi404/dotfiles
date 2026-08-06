@@ -38,6 +38,7 @@
       system.nvidia
       gaming.steam
       gaming.gamemode
+      gaming.gamescope
       gaming.heroic
       gaming.mangohud
       services.scx
