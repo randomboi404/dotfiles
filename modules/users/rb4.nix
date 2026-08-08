@@ -23,6 +23,7 @@
       apps.obsidian
       apps.pwvucontrol
       apps.nemo
+      apps.blueman
       tools.neovim
       tools.fish
       tools.starship

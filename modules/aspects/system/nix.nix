@@ -22,6 +22,13 @@
       {
         imports = [ inputs.nix-index-database.nixosModules.nix-index ];
 
+        services.journald.extraConfig = ''
+          	  SysTemMaxUse=50M";
+          	  Storage=persistent
+          	  SyncIntervalSec=1s
+          	  RateLimitIntervalSec=0
+          	'';
+
         nix = {
           settings = {
             experimental-features = [
@@ -41,7 +48,6 @@
         };
 
         environment.etc."NixOS-Config".source = flakePath;
-        services.journald.extraConfig = "SystemMaxUse=50M";
 
         programs = {
           nix-index-database.comma.enable = true;

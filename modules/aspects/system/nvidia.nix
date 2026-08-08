@@ -1,6 +1,6 @@
 {
   den.schema.host =
-    { host, lib, ... }:
+    { lib, ... }:
     {
       options.intelBusId = lib.mkOption {
         type = lib.types.nullOr lib.types.str;
@@ -23,7 +23,6 @@
         {
           config,
           lib,
-          pkgs,
           ...
         }:
         {
@@ -40,6 +39,8 @@
 
           hardware.nvidia = {
             open = true;
+            package = config.boot.kernelPackages.nvidiaPackages.new_feature;
+
             modesetting.enable = true;
 
             powerManagement = {

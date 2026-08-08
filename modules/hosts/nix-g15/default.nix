@@ -38,7 +38,7 @@
       system.nvidia
       gaming.steam
       gaming.gamemode
-      gaming.gamescope
+      # gaming.gamescope
       gaming.heroic
       gaming.mangohud
       services.scx
@@ -53,9 +53,9 @@
       desktop.fonts
       desktop.launcher.vicinae
       development.cpp
-      development.js
-      development.java
-      development.rust
+      # development.js
+      # development.java
+      # development.rust
     ];
   };
 }
