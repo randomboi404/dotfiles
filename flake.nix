@@ -18,6 +18,8 @@
 
     import-tree.url = "github:vic/import-tree";
 
+    multiverse.url = "github:fzakaria/nixpkgs-multiverse";
+
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz";
 
     nixpkgs-lib.follows = "nixpkgs";

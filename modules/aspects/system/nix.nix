@@ -20,7 +20,15 @@
         ...
       }:
       {
-        imports = [ inputs.nix-index-database.nixosModules.nix-index ];
+        imports = [
+          inputs.nix-index-database.nixosModules.nix-index
+          inputs.multiverse.nixosModules.default
+        ];
+
+        multiverse = {
+          enable = true;
+          config.allowUnfree = true;
+        };
 
         services.journald.extraConfig = ''
           	  SysTemMaxUse=50M";
