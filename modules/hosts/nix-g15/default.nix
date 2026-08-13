@@ -51,8 +51,8 @@
       features.ctl
       desktop.de.xfce
       desktop.login.lightdm
+      desktop.wm.r4wm
       desktop.fonts
-      desktop.launcher.vicinae
       development.cpp
       # development.js
       # development.java

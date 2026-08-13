@@ -3,6 +3,7 @@
   apps,
   tools,
   features,
+  desktop,
   ...
 }:
 {
@@ -24,6 +25,8 @@
       apps.pwvucontrol
       apps.nemo
       apps.blueman
+      desktop.launcher.vicinae
+      desktop.picom
       tools.neovim
       tools.fish
       tools.starship

@@ -60,6 +60,11 @@
       url = "github:NixOS/nixpkgs/3d46470bb3030020f7e1361f33514854f5bfa86d";
     };
 
+    r4wm = {
+      url = "github:randomboi404/r4wm";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixvim.url = "github:nix-community/nixvim";
   };
 
