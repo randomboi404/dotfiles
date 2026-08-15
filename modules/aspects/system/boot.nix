@@ -16,7 +16,6 @@
 
           initrd.systemd.enable = true;
 
-          # Enable silent boot
           consoleLogLevel = 3;
           initrd.verbose = false;
           kernelParams = [
@@ -24,6 +23,7 @@
             "rd.udev.log_level=3"
             "rd.systemd.show_status=auto"
             "8250.nr_uarts=0"
+            "split_lock_detect=off"
           ];
         };
       };
