@@ -38,7 +38,7 @@
       system.nvidia
       gaming.steam
       gaming.gamemode
-      # gaming.gamescope
+      gaming.gamescope
       gaming.heroic
       gaming.mangohud
       services.scx
@@ -47,6 +47,7 @@
       services.lact
       services.throttled
       services.undervolt
+      services.fwupd
       features.containers
       features.ctl
       desktop.de.xfce
