@@ -1,4 +1,3 @@
-{ inputs, ... }:
 {
   services.throttled = {
     nixos = {
@@ -21,7 +20,7 @@
           Update_Rate_s: 3
           PL1_Tdp_W: 35
           PL1_Duration_s: 28
-          PL2_Tdp_W: 60
+          PL2_Tdp_W: 80
           PL2_Duration_S: 16
           Trip_Temp_C: 85
           Disable_BDPROCHOT: True
