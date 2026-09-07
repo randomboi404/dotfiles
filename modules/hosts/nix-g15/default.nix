@@ -15,7 +15,7 @@
     };
     intelBusId = "PCI:0:2:0";
     nvidiaBusId = "PCI:1:0:0";
-    # lactYamlConfig = ./lact.yaml;
+    lactYamlConfig = ./lact.yaml;
   };
 
   den.aspects.nix-g15 = {
@@ -52,7 +52,6 @@
       features.ctl
       desktop.de.xfce
       desktop.login.lightdm
-      desktop.wm.r4wm
       desktop.fonts
       development.cpp
       # development.js

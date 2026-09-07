@@ -30,12 +30,10 @@
           config.allowUnfree = true;
         };
 
-        services.journald.extraConfig = ''
-          	  SysTemMaxUse=50M";
-          	  Storage=persistent
-          	  SyncIntervalSec=1s
-          	  RateLimitIntervalSec=0
-          	'';
+        services.journald.settings.Journal = {
+          SystemMaxUse = "200M";
+          Storage = "persistent";
+        };
 
         nix = {
           settings = {

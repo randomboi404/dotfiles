@@ -1,10 +1,10 @@
 {
   gaming.heroic = {
     nixos =
-      { config, ... }:
+      { pkgs, ... }:
       {
         environment.systemPackages = [
-          config.multiverse.instance.latest.heroic
+          pkgs.heroic
         ];
       };
   };
