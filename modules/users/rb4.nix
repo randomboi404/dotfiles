@@ -25,8 +25,9 @@
       apps.pwvucontrol
       apps.nemo
       apps.blueman
+      apps.fdm
       desktop.launcher.vicinae
-      desktop.picom
+      #desktop.picom
       tools.neovim
       tools.fish
       tools.starship
