@@ -21,6 +21,7 @@
       apps.kitty
       apps.obsidian
       apps.pwvucontrol
+      apps.nwg-look
       apps.nemo
       apps.blueman
       apps.fdm
