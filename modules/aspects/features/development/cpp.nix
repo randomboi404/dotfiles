@@ -4,7 +4,7 @@
       { pkgs, ... }:
       {
         environment.systemPackages = with pkgs; [
-	  jetbrains.clion
+          jetbrains.clion
           cmake
           gcc
           clang
