@@ -2,7 +2,6 @@
   den,
   apps,
   tools,
-  features,
   desktop,
   ...
 }:
@@ -11,9 +10,8 @@
     includes = [
       den.batteries.define-user
       den.batteries.primary-user
+      den.batteries.host-aspects
       (den.batteries.user-shell "fish")
-
-      features.containers
 
       apps.discord
       apps.spotify

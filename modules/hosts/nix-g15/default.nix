@@ -52,7 +52,8 @@
       features.ctl
       desktop.de.xfce
       desktop.login.lightdm
-      desktop.fonts
+      desktop.appearance.gtk
+      desktop.appearance.fonts
       development.cpp
       # development.js
       # development.java

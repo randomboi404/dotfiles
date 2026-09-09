@@ -10,7 +10,6 @@
           "identity.fxaccounts.enabled" = true;
           "middlemouse.paste" = false;
           "general.autoScroll" = true;
-          "widget.gtk.libadwaita-colors.enabled" = false;
         };
       };
 
