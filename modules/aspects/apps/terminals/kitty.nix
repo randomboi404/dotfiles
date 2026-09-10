@@ -16,8 +16,6 @@
           tab_bar_style = "powerline";
           tab_powerline_style = "slanted";
         };
-
-        themeFile = "Twilight";
       };
 
       dconf.settings."org/cinnamon/desktop/applications/terminal" = {

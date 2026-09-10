@@ -10,7 +10,11 @@
           "identity.fxaccounts.enabled" = true;
           "middlemouse.paste" = false;
           "general.autoScroll" = true;
+          "ui.systemUsesDarkTheme" = 1;
+          "layout.css.prefers-color-scheme.content" = 1;
         };
+
+        profiles."default".extensions.settings."FirefoxColor@mozilla.com".force = true;
       };
 
       xdg.mimeApps = {
