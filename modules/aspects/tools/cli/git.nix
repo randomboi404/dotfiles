@@ -1,7 +1,6 @@
-{ den, lib, ... }:
 {
   den.schema.user =
-    { user, lib, ... }:
+    { lib, ... }:
     {
       options.gitUserName = lib.mkOption {
         type = lib.types.nullOr lib.types.str;
@@ -16,17 +15,19 @@
   tools.git =
     { user, ... }:
     {
-      homeManager = {
-        programs.git = {
-          enable = true;
-          settings = {
-            user = {
-              name = user.gitUserName;
-              email = user.gitUserEmail;
+      homeManager =
+        { lib, ... }:
+        {
+          programs.git = {
+            enable = true;
+            settings = {
+              user = {
+                name = lib.mkIf (user.gitUserName != null) user.gitUserName;
+                email = lib.mkIf (user.gitUserEmail != null) user.gitUserEmail;
+              };
+              init.defaultBranch = "main";
             };
-            init.defaultBranch = "main";
           };
         };
-      };
     };
 }

@@ -1,12 +1,10 @@
 {
   system.bluetooth = {
-    nixos =
-      { ... }:
-      {
-        hardware.bluetooth = {
-          enable = true;
-          powerOnBoot = true;
-        };
+    nixos = {
+      hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true;
       };
+    };
   };
 }

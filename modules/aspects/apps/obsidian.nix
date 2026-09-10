@@ -1,18 +1,15 @@
-{ inputs, ... }:
 {
   apps.obsidian = {
-    homeManager =
-      { pkgs, ... }:
-      {
-        programs.obsidian = {
-          enable = true;
+    homeManager = {
+      programs.obsidian = {
+        enable = true;
 
-          defaultSettings = {
-            app = {
-              vimMode = true;
-            };
+        defaultSettings = {
+          app = {
+            vimMode = true;
           };
         };
       };
+    };
   };
 }

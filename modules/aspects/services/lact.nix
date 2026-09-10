@@ -1,12 +1,6 @@
 {
-  den,
-  inputs,
-  lib,
-  ...
-}:
-{
   den.schema.host =
-    { host, lib, ... }:
+    { lib, ... }:
     {
       options.lactYamlConfig = lib.mkOption {
         type = lib.types.nullOr lib.types.path;
@@ -30,15 +24,8 @@
               )
             );
           lactSettings = if host.lactYamlConfig != null then importYAML host.lactYamlConfig else { };
-          lactPkgs = import inputs.nixpkgs-lact { system = pkgs.stdenv.hostPlatform.system; };
         in
         {
-          nixpkgs.overlays = [
-            (final: prev: {
-              lact = lactPkgs.lact;
-            })
-          ];
-
           services.lact = {
             enable = true;
             settings = lactSettings;
