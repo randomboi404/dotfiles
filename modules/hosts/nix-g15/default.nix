@@ -50,8 +50,8 @@
       services.fwupd
       features.containers
       features.ctl
-      desktop.de.xfce
-      desktop.login.lightdm
+      desktop.wm.i3
+      desktop.login.sddm
       desktop.stylix
       development.cpp
       # development.js

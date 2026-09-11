@@ -1,6 +1,7 @@
 {
   den,
   apps,
+  services,
   tools,
   desktop,
   ...
@@ -25,8 +26,9 @@
       apps.nemo
       apps.blueman
       apps.fdm
+      services.flameshot
       desktop.launcher.vicinae
-      #desktop.picom
+      desktop.picom
       tools.neovim
       tools.fish
       tools.starship

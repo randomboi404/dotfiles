@@ -1,7 +1,11 @@
 {
   desktop.wm.i3 = {
     nixos = {
-      services.xserver.windowManager.i3 = {
+      services.xserver.windowManager.i3.enable = true;
+    };
+
+    homeManager = {
+      xsession.windowManager.i3 = {
         enable = true;
 
         config = {

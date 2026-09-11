@@ -18,7 +18,7 @@ in
           polarity = "dark";
           autoEnable = false;
 
-          base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+          base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 
           # Fonts
           fonts = {
@@ -27,10 +27,10 @@ in
               desktop = 9;
             };
 
-              serif = {
-                package = pkgs.eb-garamond;
-                name = "EB Garamond";
-              };
+            serif = {
+              package = pkgs.eb-garamond;
+              name = "EB Garamond";
+            };
             sansSerif = {
               package = pkgs.inter;
               name = "Inter";
