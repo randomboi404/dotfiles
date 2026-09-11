@@ -26,6 +26,7 @@
       apps.nemo
       apps.blueman
       apps.fdm
+      apps.dconf
       services.flameshot
       desktop.launcher.vicinae
       desktop.picom
