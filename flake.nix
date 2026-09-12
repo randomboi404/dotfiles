@@ -46,8 +46,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    xlibre-overlay.url = "git+https://codeberg.org/takagemacoed/xlibre-overlay?ref=dev-for-26.05";
-
     nixfmt-rs = {
       url = "github:Mic92/nixfmt-rs";
       inputs.nixpkgs.follows = "nixpkgs";
