@@ -36,6 +36,7 @@
       system.xserver
       system.intel
       system.nvidia
+      system.zram
       gaming.steam
       gaming.gamemode
       gaming.gamescope
