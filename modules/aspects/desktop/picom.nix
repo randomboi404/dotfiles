@@ -10,10 +10,13 @@
         fade = true;
         fadeDelta = 10;
 
-        activeOpacity = 1.0;
-        inactiveOpacity = 0.8;
+        activeOpacity = 0.95;
+        inactiveOpacity = 0.75;
+
+        opacityRules = [ "100:fullscreen" ];
 
         settings = {
+          corner-radius = 12;
           fade-in-step = 0.08;
           fade-out-step = 0.08;
 

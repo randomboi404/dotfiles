@@ -5,8 +5,8 @@
         enable = true;
 
         settings = {
-          hide_window_decorations = "yes";
           confirm_os_window_close = 0;
+          font_size = 12;
           window_padding_width = 20;
 
           cursor_trail = 3;
