@@ -7,9 +7,9 @@
         settings.General = {
           disabledTrayIcon = true;
           showStartupLaunchMessage = false;
-          showDesktopNotifications = false;
-          showAbortNotifications = false;
-          showSidePanel = true;
+          showDesktopNotification = false;
+          showAbortNotification = false;
+          showSidePanelButton = true;
           useX11LegacyScreenshot = true;
           captureActiveMonitor = true;
         };
