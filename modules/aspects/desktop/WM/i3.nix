@@ -4,14 +4,129 @@
       services.xserver.windowManager.i3.enable = true;
     };
 
-    homeManager = {
+    homeManager = { pkgs, config, ... }: {
+      programs.i3status-rust = {
+        enable = true;
+
+        bars = {
+          main = {
+            theme = "plain";
+            icons = "awesome5";
+
+            settings = {
+              theme.overrides = config.lib.stylix.i3status-rust.bar;
+              icons = {
+                icons = "awesome5";
+              };
+            };
+
+            blocks = [
+              {
+                block = "cpu";
+                interval = 2;
+                format = " $barchart ";
+              }
+              {
+                block = "disk_space";
+                path = "/";
+                info_type = "available";
+                interval = 30;
+                warning = 20.0;
+                alert = 10.0;
+                format = " $icon $available.eng(w:2) ";
+              }
+              {
+                block = "net";
+                interval = 5;
+                format = " $icon {$signal_strength $ssid|Wired} ";
+              }
+              {
+                block = "battery";
+                interval = 30;
+                format = " $icon $percentage ";
+                not_charging_format = " $icon $percentage ";
+              }
+              {
+                block = "sound";
+                format = " $icon {$volume.eng(w:2)|muted} ";
+                click = [
+                  {
+                    button = "left";
+                    cmd = "ctl audio mute-tg";
+                  }
+                  {
+                    button = "wheel_up";
+                    cmd = "ctl audio inc";
+                  }
+                  {
+                    button = "wheel_down";
+                    cmd = "ctl audio dec";
+                  }
+                ];
+              }
+              {
+                block = "backlight";
+                device = "intel_backlight";
+                format = " $icon $brightness ";
+                click = [
+                  {
+                    button = "left";
+                    cmd = "ctl bright dec";
+                  }
+                  {
+                    button = "right";
+                    cmd = "ctl bright inc";
+                  }
+                ];
+              }
+              {
+                block = "time";
+                interval = 5;
+                format = " $icon $timestamp.datetime(f:'%a %d %b %H:%M') ";
+              }
+            ];
+          };
+        };
+      };
+
       xsession.windowManager.i3 = {
         enable = true;
 
         config = {
           terminal = "kitty";
 
-          bars = [ ];
+          startup = [
+            {
+              command = "sh -c 'for i in 1 2 3 4 5; do i3-msg --quiet \"workspace number 1\" && exit 0; sleep 0.5; done'";
+              notification = false;
+            }
+          ];
+
+          bars = [
+            (
+              {
+                position = "top";
+                mode = "dock";
+                workspaceButtons = true;
+                workspaceNumbers = true;
+
+                trayOutput = "primary";
+                trayPadding = 6;
+
+                statusCommand = "${pkgs.i3status-rust}/bin/i3status-rs \$HOME/.config/i3status-rust/config-main.toml";
+              }
+              // config.stylix.targets.i3.exportedBarConfig
+              // {
+                fonts = {
+                  names = [
+                    "JetBrainsMono Nerd Font"
+                    "Noto Color Emoji"
+                  ];
+                  size = 9.0;
+                };
+              }
+            )
+          ];
 
           gaps = {
             inner = 10;

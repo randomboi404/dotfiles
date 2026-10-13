@@ -5,11 +5,11 @@
       let
         freedownloadmanager = pkgs.stdenv.mkDerivation rec {
           pname = "freedownloadmanager";
-          version = "6.34.4.6974";
+          version = "6.35.0.7018";
 
           src = pkgs.fetchurl {
-            url = "http://debrepo.freedownloadmanager.org/pool/main/f/freedownloadmanager/freedownloadmanager_${version}_amd64.deb";
-            hash = "sha256-KZxb7xgLV4riI+A6EIJ5w7gOx/m84+F5JGnUbe4vxs0=";
+            url = "https://debrepo.freedownloadmanager.org/pool/main/f/freedownloadmanager/freedownloadmanager_${version}_amd64.deb";
+            hash = "sha256-rsxMB5RoVmjoSWij1e8kd8Ux0Pl2jSDzzFNx2bO59Wc=";
           };
 
           unpackPhase = "dpkg-deb -x $src .";
